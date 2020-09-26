@@ -1,0 +1,5 @@
+user_1 = User.create(username: "Greg", email: "gregpaul@gmail.com", password: "Ilovenachos")
+tweet_1 = Tweet.create(content: "I was only 9 years old. I loved shrek so much...", user_id: 1)
+user_2 = User.create(username: "John", email: "Johnsonmen@gmail.com", password: "Ilovenachos")
+tweet_2 = Tweet.create(content: "What's green and invisible... this cabbage", user_id: 1)
+tweet_3 = Tweet.create(content: "mfewimofewoi", user_id: 2)

@@ -1,0 +1,23 @@
+<!Doctype html>
+<% @tweets.each do |tweet| %> 
+<% user = User.find(tweet.user_id) %>
+<%= "#{user.username}: " %>
+<%= tweet.content %>
+
+
+
+<% if user.id == @user.id %>
+<a href= "/tweets/<%= tweet.id %>/edit">Edit This Tweet</a>
+<br>
+<a href='/delete/<%= tweet.id %>'>Delete This Tweet</a>
+<br>
+
+<% end %>
+<br><br><br>
+<% end %>
+<br><br><br><br>
+<form action="/new" method="post">
+  <input type="submit" value="Write a new Tweet" id="Submit">
+</form>
+<br><br><br><br>
+<a href="/logout">Logout?</a>

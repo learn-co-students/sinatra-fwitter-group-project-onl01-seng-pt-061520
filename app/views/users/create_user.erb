@@ -1,0 +1,17 @@
+<!Doctype html> 
+
+<form action="/signup" method="POST">
+  <input name="username" id="username" type="text" placeholder="Username"/>
+  <br><br>
+  <input name="email" id="email" type="text" placeholder="Email"/>
+  <br><br>
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Submit" id="Submit"/>
+  <br>
+  Already have an account? 
+  <a href="/login">Log In Here</a>
+  <br><br>
+  <% if @a %>
+  <%= @a %>
+  <% end %>
+  </form>

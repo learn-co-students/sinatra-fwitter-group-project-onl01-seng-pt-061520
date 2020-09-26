@@ -1,0 +1,21 @@
+<!Doctype html> 
+<% binding.pry %>
+<% a = @tweet.content %>
+<% if !logged_in? %> 
+<h1>You're not logged in. Please log in to edit tweets</h1>
+<a href="/login">Login</a>
+<% elsif @user == nil %> 
+<h1>This isn't your tweet. Please return to the homepage</h1>
+<a href="/tweets">Return to homepage</a>
+<% else %>
+<form action="/tweets/<%= @tweet.id %>/" method="post">
+  <input type="hidden" id="hidden" name="_method" value="patch">
+  <input type="textarea" value="<%= a %>" name="content">
+  <input type="submit" value="Submit" id="Submit">
+</form>
+<br><br>
+<% end %>
+<% if @a %> 
+<%= @a %> 
+<% end %> 
+
